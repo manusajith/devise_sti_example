@@ -1,0 +1,2 @@
+class EndUserA < User
+end

@@ -1,0 +1,29 @@
+<h1>Listing posts</h1>
+<div class="table-responsive">
+  <table class="table">
+    <thead>
+      <tr>
+        <th>Title</th>
+        <th>Author<th>
+        <th>Content</th>
+        <th colspan="3"></th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <% @posts.each do |post| %>
+        <tr>
+          <td><%= post.title %></td>
+          <td><%= post.user.user_detail.full_name rescue "" %></td>
+          <td><%= post.content %></td>
+          <td><%= link_to 'Show', post, class: 'btn btn-primary' %></td>
+          <td><%= link_to 'Edit', edit_post_path(post), class: 'btn btn-primary' %></td>
+          <td><%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-danger' %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+</div>
+<br>
+
+<%= link_to 'New Post', new_post_path, class: 'btn' %>

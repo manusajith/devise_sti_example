@@ -1,0 +1,16 @@
+== README
+
+A sample application using devise as authentication and using Single Table Inheritence
+
+* Ruby version
+Ruby 2.1.2
+
+* Additional Gems
+
+Devise
+twitter-bootstrap-rails
+cancancan
+
+
+Please feel free to use a different markup language if you do not plan to run
+<tt>rake doc:app</tt>.
